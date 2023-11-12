@@ -90,21 +90,6 @@ public class MagicTimer {
     private var executive: MagicTimerExecutiveInterface
     private var backgroundCalculator: MagicTimerBackgroundCalculatorInterface
 
-    // MARK: - Unavailable
-    /// A elapsed time that can observe
-    /// - Warning: renamed: "elapsedTimeDidChangeHandler"
-    public var observeElapsedTime: ((TimeInterval) -> Void)?
-    
-    /// The current state of the timer.
-    /// - Warning: renamed: "lastState"
-    public var currentState: MagicTimerState {
-        return lastState
-    }
-    
-    /// Timer state callback
-    /// - Warning: renamed: "lastStateDidChangeHandler"
-    public var didStateChange: ((MagicTimerState) -> Void)?
-    
     // MARK: - Constructors
     public init(counter: MagicTimerCounterInterface = MagicTimerCounter(),
                 executive: MagicTimerExecutiveInterface = MagicTimerExecutive(),
